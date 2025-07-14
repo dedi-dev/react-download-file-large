@@ -1,0 +1,3 @@
+@echo off
+echo Starting React development server...
+node node_modules/.bin/vite

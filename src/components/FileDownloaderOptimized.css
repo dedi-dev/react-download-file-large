@@ -1,0 +1,286 @@
+/* Memory optimized FileDownloader styles */
+.download-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.btn-primary:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+}
+
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.progress-container {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.progress-text {
+  text-align: center;
+  font-weight: bold;
+  color: #495057;
+}
+
+.processing-stage {
+  text-align: center;
+  font-size: 12px;
+  color: #6c757d;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.memory-info {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f1f3f4;
+  border-radius: 4px;
+  border: 1px solid #dadce0;
+}
+
+.memory-info h4 {
+  margin: 0 0 10px 0;
+  color: #3c4043;
+}
+
+.memory-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.memory-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e8eaed;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.memory-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #34a853, #fbbc04, #ea4335);
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+.download-info {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #e3f2fd;
+  border-radius: 4px;
+  border: 1px solid #bbdefb;
+}
+
+.download-info h3 {
+  margin: 0 0 15px 0;
+  color: #1976d2;
+}
+
+.download-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #424242;
+}
+
+.download-info strong {
+  color: #1976d2;
+}
+
+.error-message {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #ffebee;
+  border-radius: 4px;
+  border: 1px solid #ffcdd2;
+  color: #c62828;
+}
+
+.success-message {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #e8f5e8;
+  border-radius: 4px;
+  border: 1px solid #c8e6c9;
+  color: #2e7d32;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .download-form {
+    padding: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+  
+  .form-group input,
+  .form-group select {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .download-form {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  .form-group input,
+  .form-group select {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #ffffff;
+  }
+  
+  .progress-container {
+    background-color: #2d2d2d;
+    border-color: #444;
+  }
+  
+  .memory-info {
+    background-color: #2d2d2d;
+    border-color: #444;
+  }
+  
+  .download-info {
+    background-color: #1e3a5f;
+    border-color: #2c5282;
+  }
+  
+  .error-message {
+    background-color: #3d1a1a;
+    border-color: #744d4d;
+  }
+  
+  .success-message {
+    background-color: #1a3d1a;
+    border-color: #4d744d;
+  }
+}
+
+/* Animation for smooth transitions */
+.download-form * {
+  transition: all 0.2s ease;
+}
+
+/* Accessibility improvements */
+.btn:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+  border-color: #007bff;
+}
+
+/* Print styles */
+@media print {
+  .btn {
+    display: none;
+  }
+  
+  .progress-container {
+    display: none;
+  }
+  
+  .memory-info {
+    display: none;
+  }
+}

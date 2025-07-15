@@ -23,5 +23,5 @@ export const createDownloadRequest = (requestId, type, part) => ({
 export const getHeaders = () => ({
   'Content-Type': 'application/json',
   'Accept': 'application/octet-stream, application/zip, text/csv, */*',
-  'Authorization': `Bearer c73e5fc5-3ca5-4960-a8fd-1511a57fe197` // Ganti dengan token yang sesuai
+  'Authorization': `Bearer 1aa15090-2658-48e9-a1c8-df5a9185e7f2` // Ganti dengan token yang sesuai
 })
